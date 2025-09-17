@@ -154,6 +154,46 @@ settings.py is the configuration hub of Django project that defines installed ap
 
 
 
+**ASSIGNMENT 3**
+
+
+
+
+
+**Question 1: Why do we need data delivery in implementing a platform?**
+
+
+
+Data delivery is important in implementing a platform because it enables dynamic updates and synchronization across distributed systems, efficient data transfer helps with handling and increasing loads and users, facilitates connection with third-party services or external systems and APIs, ensures all components have access to the same latest info, enables responsive applications.
+
+
+
+**Question 2: In your opinion, which is better, XML or JSON? Why is JSON more popular than XML?**
+
+
+
+In my opinion, JSON is mostly better due to its readability and simplicity. JSON is more popular than XML because it has less verbose syntax with no closing tags which makes the size smaller. It is also easier to read and write. Another is that JSON parses in JavaScript which makes it ideal for web applications.
+
+
+
+**Question 3: What is the purpose of the is\_valid() method in Django forms, and why do we need it?**
+
+
+
+is\_valid() serves to validate form data and checks if all data conforms to the form's field definitions and constraints. It also converts form dtaa to appropriate Python data types, validates against potential security risks, and gathers all validation errors to display.
+
+
+
+**Question 4: Why do we need a csrf\_token when making forms in Django? What can happen if we don't include a csrf\_token in a Django form? How can this be exploited by an attacker?**
+
+
+
+We need csrf\_token because CSRF tokens protect against attacks where malicious webs trick users into submitting unwanted requests to your Django app.
+
+
+
+
+
 
 
 
