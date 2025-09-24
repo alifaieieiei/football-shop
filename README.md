@@ -194,9 +194,67 @@ We need csrf\_token because CSRF tokens protect against attacks where malicious 
 
 
 
+**ASSIGNMENT 4**
 
 
 
+**Question 1: What is Django's AuthenticationForm? Explain its advantages and disadvantages.**
+
+
+
+Django AuthenticationForm is a built-in form class that lets you use a ready-to-use login form for user authentication.
+
+
+
+Advantages: Saves development time, includes built-in security measures, automatically validates credentials against use database, can be customized.
+
+
+
+Disadvantages: Only handles username and password auth, requires additional setup for social authentication.
+
+
+
+**Question 2:  What is the difference between authentication and authorization? How does Django implement the two concepts?**
+
+
+
+Authentication is the act or process of verifying user, while authorization is the act or process of determining what user can do or access.
+
+
+
+Django implementation:
+
+
+
+Authentication can be done using the "from django.contrib.auth import authenticate, login" import, authorization can be done using the "from django.contrib.auth.decorators import login\_required" import 
+
+
+
+**Question 3: What are the benefits and drawbacks of using sessions and cookies in storing the state of a web application?**
+
+
+
+Benefits: Maintain user state across multiple reqs, enable personalized content, essential for maintaining login state, reduce database queries
+
+
+
+Drawbacks: Vulnerable to hijacking or attacks, additional data transmission with each request, cookies have size constraints
+
+
+
+**Question 4: in web development, is the usage of cookies secure by default, or is there any potential risk that we should be aware of? How does Django handle this problem?**
+
+
+
+Cookies are not secure by default. 
+
+
+
+Risks: XSS attacks, CSRF, session hijacking, cookie tossing.
+
+
+
+Security measures: using csrf token, secure cookie settings, session security
 
 
 
