@@ -28,9 +28,9 @@ from django.urls import path, include
 
 urlpatterns = \[
 
-&nbsp;   path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
 
-&nbsp;   path('', include('main.urls')),  # Main app routing
+    path('', include('main.urls')),  # Main app routing
 
 ]
 
@@ -80,7 +80,7 @@ app\_name = 'main'
 
 urlpatterns = \[
 
-&nbsp;   path('', show\_main, name='show\_main'),
+    path('', show\_main, name='show\_main'),
 
 ]
 
@@ -226,7 +226,7 @@ Django implementation:
 
 
 
-Authentication can be done using the "from django.contrib.auth import authenticate, login" import, authorization can be done using the "from django.contrib.auth.decorators import login\_required" import 
+Authentication can be done using the "from django.contrib.auth import authenticate, login" import, authorization can be done using the "from django.contrib.auth.decorators import login\_required" import
 
 
 
@@ -246,7 +246,7 @@ Drawbacks: Vulnerable to hijacking or attacks, additional data transmission with
 
 
 
-Cookies are not secure by default. 
+Cookies are not secure by default.
 
 
 
@@ -257,4 +257,149 @@ Risks: XSS attacks, CSRF, session hijacking, cookie tossing.
 Security measures: using csrf token, secure cookie settings, session security
 
 
+
+
+
+**Assignment 5**
+
+
+
+**Question 1: CSS Selector Priority: If multiple CSS selectors target an HTML element, explain the priority order for CSS selector selection**
+
+
+
+Inline styles (highest priority) - style="color: red;"
+
+ID selectors - #header
+
+Class selectors, attribute selectors, pseudo-classes - .button, \[type="text"], :hover
+
+Element selectors, pseudo-elements - div, p, ::before
+
+
+
+Specificity format: (inline, IDs, classes, elements)
+
+Inline: 1,0,0,0
+
+ID: 0,1,0,0
+
+Class: 0,0,1,0
+
+Element: 0,0,0,1
+
+
+
+**Question 2: Responsive Design:**
+
+
+
+* **Why is responsive design important in web application development?**
+
+Improved UX, prioritizes mobile-friendly sites, efficient cost, adapts to new screen sizes and devices.
+
+
+
+* **Provide examples of applications that have and haven't implemented responsive design**
+
+Responsive: Netflix
+
+Not really responsive: Early desktop only sites like government webs.
+
+
+
+* **Explain the reasons behind your examples**
+
+Netflix: Adapts to the screen / device layout completely
+
+Early sites: Often requires zooming if seen via a mobile device.
+
+
+
+**Question 3: Box Model: Explain the differences between margin, border, and padding, and how to implement them**
+
+
+
+Padding - Inside space
+
+* Between content and border
+* Affects element's background
+
+
+
+Border - The edge
+
+* Line surrounding the element
+* Visible styling
+
+
+
+Margin - Outside space
+
+* Between elements
+* Transparent, doesn't affect background
+
+
+
+Example: {
+
+&nbsp; padding: 20px;    /\* Inside spacing \*/
+
+&nbsp; border: 2px solid red;  /\* Visible edge \*/
+
+&nbsp; margin: 10px;     /\* Outside spacing \*/
+
+**}**
+
+
+
+
+
+**Question 4: Implementation steps:**
+
+
+
+1. Connect project to Tailwind
+
+
+
+<head>
+
+{% block meta %}
+
+&nbsp;   <meta charset="UTF-8" />
+
+&nbsp;   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% endblock meta %}
+
+<script src="https://cdn.tailwindcss.com">
+
+</script>
+
+</head>
+
+
+
+2\. Add edit\_product function to views.py just like in TUTORIAL 4, but adjust it to fit the football shop theme.
+
+3\. Create edit\_product.html in main/templates and fill with the text similar to what is shown in TUTORIAL 4, but adjust the theme.
+
+4\. Import function to urls.py and create a path.
+
+5\. Open main.html in main/templates and change the product\_list loop.
+
+6\. Repeat the same steps for delete\_product (without making a new html file)
+
+7\. Create navbar.html in templates/, adjust the code provided in TUTORIAL 4 and put it in navbar.html
+
+8\. Include navbar.html in main.html in main/templates/
+
+9\. add 'whitenoise.middleware.WhiteNoiseMiddleware' to MIDDLEWARE in settings.py
+
+10\. Add <link rel="stylesheet" href="{% static 'css/global.css' %}"/> to base.html
+
+11\. Modify global.css in static/css/ with the code in TUTORIAL 4. for this assignment, I changed green to orange.
+
+12\. Style navbar and the other html files according to the codes in TUTORIAL 4, just adjust the theme.
 
