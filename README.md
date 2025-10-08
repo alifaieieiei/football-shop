@@ -403,3 +403,39 @@ Example: {
 
 12\. Style navbar and the other html files according to the codes in TUTORIAL 4, just adjust the theme.
 
+**Assignment 6**
+
+**Question 1: What is the difference between synchronous request and asynchronous request?**
+
+Synchronous: Blocks user interaction until request completes
+Asynchronous: Allows continued interaction during request processing
+
+**Question 2: How does AJAX work in Django (request–response flow)?**
+
+JavaScript sends request → Django view processes → Returns JSON/XML → JavaScript updates DOM without page reload
+
+**Question 3: What are the advantages of using AJAX compared to regular rendering in Django?**
+
+- Faster partial updates
+- Better user experience  
+- Reduced bandwidth usage
+- No full page reloads
+- More interactive applications
+
+**Question 4: How do you ensure security when using AJAX for Login and Register features in Django?**
+
+- CSRF token validation
+- Input sanitization
+- HTTPS encryption
+- Authentication checks
+- Rate limiting
+- Secure headers
+
+**Question 5: How does AJAX affect user experience (UX) on websites?**
+
+- Improved responsiveness
+- No page reload interruptions  
+- Real-time feedback
+- Smoother interactions
+- Enhanced perceived performance
+
